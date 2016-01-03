@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7CB30290-6902-4317-BFD1-BFB96DD0FDF4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dealer</RootNamespace>
+    <AssemblyName>Dealer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Automoviles.cs" />
+    <Compile Include="Clientes.cs" />
+    <Compile Include="ConnectionDB.cs" />
+    <Compile Include="DealerDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DealerDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfirmarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmarClave.Designer.cs">
+      <DependentUpon>frmConfirmarClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaAutomoviles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaAutomoviles.Designer.cs">
+      <DependentUpon>frmConsultaAutomoviles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaClientes.Designer.cs">
+      <DependentUpon>frmConsultaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarSuplidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarSuplidores.Designer.cs">
+      <DependentUpon>frmConsultarSuplidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarVentas.Designer.cs">
+      <DependentUpon>frmConsultarVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaUsuarios.Designer.cs">
+      <DependentUpon>frmConsultaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarAutomovil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarAutomovil.Designer.cs">
+      <DependentUpon>frmEliminarAutomovil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarClientes.Designer.cs">
+      <DependentUpon>frmEliminarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarSuplidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarSuplidores.Designer.cs">
+      <DependentUpon>frmEliminarSuplidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarUsuario.Designer.cs">
+      <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarAutomovil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarAutomovil.Designer.cs">
+      <DependentUpon>frmModificarAutomovil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarClientes.Designer.cs">
+      <DependentUpon>frmModificarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarSuplidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarSuplidores.Designer.cs">
+      <DependentUpon>frmModificarSuplidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarUsuario.Designer.cs">
+      <DependentUpon>frmModificarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarAutomovil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarAutomovil.Designer.cs">
+      <DependentUpon>frmRegistrarAutomovil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarCliente.Designer.cs">
+      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarSuplidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarSuplidores.Designer.cs">
+      <DependentUpon>frmRegistrarSuplidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarUsuario.Designer.cs">
+      <DependentUpon>frmRegistrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteAutomoviles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteAutomoviles.Designer.cs">
+      <DependentUpon>frmReporteAutomoviles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteClientes.Designer.cs">
+      <DependentUpon>frmReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteSuplidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteSuplidores.Designer.cs">
+      <DependentUpon>frmReporteSuplidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteUsuarios.Designer.cs">
+      <DependentUpon>frmReporteUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteVenttas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteVenttas.Designer.cs">
+      <DependentUpon>frmReporteVenttas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rpAutomoviles.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpAutomoviles.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpClientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpSuplidores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpSuplidores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpUsuarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpUsuarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpVentas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpVentas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Suplidores.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Ventas.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirmarClave.resx">
+      <DependentUpon>frmConfirmarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaAutomoviles.resx">
+      <DependentUpon>frmConsultaAutomoviles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaClientes.resx">
+      <DependentUpon>frmConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarSuplidores.resx">
+      <DependentUpon>frmConsultarSuplidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarVentas.resx">
+      <DependentUpon>frmConsultarVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaUsuarios.resx">
+      <DependentUpon>frmConsultaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarAutomovil.resx">
+      <DependentUpon>frmEliminarAutomovil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarClientes.resx">
+      <DependentUpon>frmEliminarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarSuplidores.resx">
+      <DependentUpon>frmEliminarSuplidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarUsuario.resx">
+      <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarAutomovil.resx">
+      <DependentUpon>frmModificarAutomovil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarClientes.resx">
+      <DependentUpon>frmModificarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarSuplidores.resx">
+      <DependentUpon>frmModificarSuplidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarUsuario.resx">
+      <DependentUpon>frmModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarAutomovil.resx">
+      <DependentUpon>frmRegistrarAutomovil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarCliente.resx">
+      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarSuplidores.resx">
+      <DependentUpon>frmRegistrarSuplidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarUsuario.resx">
+      <DependentUpon>frmRegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteAutomoviles.resx">
+      <DependentUpon>frmReporteAutomoviles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteClientes.resx">
+      <DependentUpon>frmReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteSuplidores.resx">
+      <DependentUpon>frmReporteSuplidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteUsuarios.resx">
+      <DependentUpon>frmReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteVenttas.resx">
+      <DependentUpon>frmReporteVenttas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="rpAutomoviles.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpAutomoviles.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpClientes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpSuplidores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpSuplidores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpUsuarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpUsuarios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpVentas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpVentas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DealerDBDataSet.xsc">
+      <DependentUpon>DealerDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DealerDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DealerDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DealerDBDataSet.xss">
+      <DependentUpon>DealerDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
